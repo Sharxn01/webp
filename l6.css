@@ -1,0 +1,39 @@
+/* styles.css */
+body {
+    display: flex; /* Center the ball */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: lightyellow; /* Background color */
+}
+
+.ball {
+    width: 50px; /* Initial width */
+    height: 50px; /* Initial height */
+    background-color: red; /* Initial color of the ball */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute; /* Positioning for bouncing effect */
+    animation: bounce 1s 0s; /* Animation properties */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+        background-color: red; /* Initial color */
+        width: 50px; /* Initial radius */
+        height: 50px; /* Initial radius */
+    }
+   
+    50% {
+        transform: translateY(-200px); /* Mid-bounce position */
+        background-color: green; /* Change color */
+        width: 60px; /* Change radius */
+        height: 60px; /* Change radius */
+    }
+    100% {
+        transform: translateY(0); /* Final position at center */
+        background-color: red; /* Final color when reaching center */
+        width: 50px; /* Reset to initial radius */
+        height: 50px; /* Reset to initial radius */
+    }
+}
